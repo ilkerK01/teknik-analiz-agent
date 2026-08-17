@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="790" viewBox="0 0 920 790" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="ok" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect width="920" height="790" fill="#ffffff"/>
+
+  <text x="30" y="38" font-size="18" font-weight="600" fill="#0f172a">Teknik Servis Agent - LangGraph akisi</text>
+  <text x="30" y="58" font-size="12" fill="#64748b">tek seferlik, dongusuz, 5 node, 2 LLM cagrisi</text>
+
+  <rect x="650" y="26" width="14" height="14" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="672" y="38" font-size="11" fill="#334155">LLM cagrisi yapar</text>
+  <rect x="650" y="48" width="14" height="14" fill="#dcfce7" stroke="#22c55e"/>
+  <text x="672" y="60" font-size="11" fill="#334155">LLM yok, kural veya sablon</text>
+  <rect x="650" y="70" width="14" height="14" fill="#fee2e2" stroke="#ef4444"/>
+  <text x="672" y="82" font-size="11" fill="#334155">acil yol</text>
+
+  <ellipse cx="340" cy="118" rx="54" ry="24" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="340" y="124" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">START</text>
+
+  <line x1="340" y1="142" x2="340" y2="174" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+
+  <rect x="240" y="176" width="200" height="64" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="340" y="202" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">ANALIZ</text>
+  <text x="340" y="222" font-size="11" fill="#475569" text-anchor="middle">LLM &#183; sicaklik 0.0</text>
+
+  <text x="466" y="196" font-size="11" font-weight="600" fill="#334155">LLM cagrisi 1</text>
+  <text x="466" y="212" font-size="11" fill="#64748b">okur: sikayet</text>
+  <text x="466" y="228" font-size="11" fill="#64748b">yazar: cihaz_tipi, belirtiler,</text>
+  <text x="466" y="244" font-size="11" fill="#64748b">olasi_sebepler, varsayimlar</text>
+
+  <line x1="340" y1="240" x2="340" y2="272" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+
+  <rect x="240" y="274" width="200" height="64" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="340" y="300" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">TRIYAJ</text>
+  <text x="340" y="320" font-size="11" fill="#475569" text-anchor="middle">kural &#183; LLM yok</text>
+
+  <text x="466" y="298" font-size="11" font-weight="600" fill="#334155">saf Python, deterministik</text>
+  <text x="466" y="314" font-size="11" fill="#64748b">okur: belirtiler</text>
+  <text x="466" y="330" font-size="11" fill="#64748b">yazar: aciliyet, kirmizi_bayraklar</text>
+
+  <line x1="340" y1="338" x2="340" y2="368" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+
+  <polygon points="340,370 434,418 340,466 246,418" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="340" y="414" font-size="12" font-weight="600" fill="#0f172a" text-anchor="middle">yonlendirici</text>
+  <text x="340" y="432" font-size="11" fill="#475569" text-anchor="middle">aciliyet ?</text>
+
+  <text x="655" y="408" font-size="11" font-weight="600" fill="#334155">add_conditional_edges</text>
+  <text x="655" y="424" font-size="11" fill="#64748b">node degil, kenar karar fonksiyonu</text>
+  <text x="655" y="440" font-size="11" fill="#64748b">durum.get("aciliyet") dondurur</text>
+
+  <polyline points="246,418 150,418 150,509" fill="none" stroke="#ef4444" stroke-width="2" marker-end="url(#ok)"/>
+  <text x="196" y="408" font-size="12" font-weight="600" fill="#ef4444" text-anchor="middle">"kirmizi"</text>
+
+  <polyline points="434,418 530,418 530,509" fill="none" stroke="#3b82f6" stroke-width="2" marker-end="url(#ok)"/>
+  <text x="484" y="408" font-size="12" font-weight="600" fill="#3b82f6" text-anchor="middle">"sari" / "yesil"</text>
+
+  <rect x="50" y="511" width="200" height="68" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+  <text x="150" y="539" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">SERVIS YONLENDIR</text>
+  <text x="150" y="559" font-size="11" fill="#475569" text-anchor="middle">sabit sablon &#183; LLM yok</text>
+
+  <rect x="430" y="511" width="200" height="68" rx="10" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <text x="530" y="539" font-size="13" font-weight="600" fill="#0f172a" text-anchor="middle">COZUM URET</text>
+  <text x="530" y="559" font-size="11" fill="#475569" text-anchor="middle">LLM &#183; sicaklik 0.3</text>
+
+  <polyline points="150,579 150,662 232,662" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+  <polyline points="530,579 530,662 448,662" fill="none" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+
+  <rect x="240" y="630" width="200" height="64" rx="10" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="340" y="656" font-size="14" font-weight="600" fill="#0f172a" text-anchor="middle">CIKTI</text>
+  <text x="340" y="676" font-size="11" fill="#475569" text-anchor="middle">sablon &#183; LLM yok</text>
+
+  <line x1="340" y1="694" x2="340" y2="724" stroke="#334155" stroke-width="2" marker-end="url(#ok)"/>
+
+  <ellipse cx="340" cy="750" rx="50" ry="24" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <text x="340" y="756" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">END</text>
+
+  <rect x="648" y="580" width="252" height="132" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="662" y="602" font-size="11" font-weight="600" fill="#334155">Durum'a yazilanlar</text>
+  <text x="662" y="624" font-size="10.5" fill="#64748b">analiz &#8594; cihaz_tipi, belirtiler,</text>
+  <text x="662" y="640" font-size="10.5" fill="#64748b">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;olasi_sebepler, varsayimlar</text>
+  <text x="662" y="660" font-size="10.5" fill="#64748b">triyaj &#8594; aciliyet, kirmizi_bayraklar</text>
+  <text x="662" y="680" font-size="10.5" fill="#64748b">servis / cozum &#8594; cozum_adimlari</text>
+  <text x="662" y="700" font-size="10.5" fill="#64748b">cikti &#8594; yanit</text>
+
+  <rect x="26" y="176" width="192" height="96" rx="8" fill="#fffbeb" stroke="#fbbf24"/>
+  <text x="38" y="198" font-size="11" font-weight="600" fill="#92400e">Fail-safe</text>
+  <text x="38" y="218" font-size="10.5" fill="#92400e">analiz patlarsa belirtiler bos</text>
+  <text x="38" y="234" font-size="10.5" fill="#92400e">kalir, triyaj otomatik "sari"</text>
+  <text x="38" y="250" font-size="10.5" fill="#92400e">verir. Asla "yesil"e dusmez.</text>
+</svg>

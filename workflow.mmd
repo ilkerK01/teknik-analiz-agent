@@ -1,0 +1,27 @@
+flowchart TD
+    BASLA([START]) --> ANALIZ["ANALIZ
+    LLM - sicaklik 0.0
+    yazar: cihaz_tipi, belirtiler,
+    olasi_sebepler, varsayimlar"]
+
+    ANALIZ --> TRIYAJ["TRIYAJ
+    kural - LLM yok
+    yazar: aciliyet, kirmizi_bayraklar"]
+
+    TRIYAJ --> ROUTER{"yonlendirici
+    aciliyet ?"}
+
+    ROUTER -->|kirmizi| SERVIS["SERVIS YONLENDIR
+    sabit sablon - LLM yok
+    yazar: cozum_adimlari"]
+
+    ROUTER -->|sari / yesil| COZUM["COZUM URET
+    LLM - sicaklik 0.3
+    yazar: cozum_adimlari"]
+
+    SERVIS --> CIKTI["CIKTI
+    sablon - LLM yok
+    yazar: yanit"]
+
+    COZUM --> CIKTI
+    CIKTI --> BITIR([END])
