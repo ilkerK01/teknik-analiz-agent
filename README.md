@@ -123,7 +123,3 @@ workflow.mmd    akis semasi (mermaid, duzenlenebilir)
   node'u `varsayimlar` alanini doldurur ve cikti kosullu kurulur.
 - Sadece bilgisayar (masaustu ve dizustu) kapsamindadir.
 - Tibbi veya hukuki bir tavsiye degildir; gercek bir teknik servisin yerini tutmaz.
-
-## Lisans
-
-MIT
