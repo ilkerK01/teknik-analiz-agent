@@ -4,7 +4,7 @@
   <img src="mimari.png" alt="LangGraph akis semasi" width="100%">
 </p>
 
-LangGraph ile kurulmus bir teknik servis danisma ajani. Kullanici bilgisayariyla
+LangGraph ile kurulmus bir teknik servis danisma ajanidir. Kullanici bilgisayariyla
 ilgili sikayetini serbest metin olarak yazar; sistem sikayeti analiz eder,
 aciliyetini belirler ve iki yoldan birine gider:
 
