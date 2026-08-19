@@ -106,7 +106,7 @@ python kurallar.py
 ```
 durum.py        grafigin state semasi (TypedDict)
 semalar.py      LLM'den istenen yapilar (Pydantic)
-kurallar.py     belirti kodlari, kirmizi bayraklar, triyaj mantigi
+kurallar.py     belirti kodlari(donma, kasma), acil durumlar icin keyler(kirmizi bayrak), acil durum akışı triyaj mantıgı
 model.py        model baglantisi, tek noktadan
 promptlar.py    prompt metinleri ve acil yol sablonu
 dugumler.py     bes node fonksiyonu
